@@ -7,6 +7,8 @@
     <script  type="text/javascript"  src="./js/app.js"></script>
     <script  type="text/javascript"  src="./js/controllers.js"></script>
     <script  type="text/javascript"  src="./js/ToDoFactory.js"></script>
+    <script  type="text/javascript"  src="./js/ToDoService.js"></script>
+
   </head>
   <body>
     <h1>To Do List</h1>
@@ -14,7 +16,7 @@
       <p ng-repeat="list in ctrl.todos">
         {{ list.text }}:
         {{ list.completed ? "completed" : "to be done" }}
-        <span ng-click="list.complete();">Complete</span>
+        <button ng-click="list.complete();">Complete</button>
       </p>
 
       <input ng-model="newItem" type="text">
