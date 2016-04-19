@@ -8,12 +8,16 @@
     <script  type="text/javascript"  src="./js/controllers.js"></script>
   </head>
   <body>
-    <div ng-controller="ToDoController as list">
-      <div ng-repeat="item in list.todos">
-        {{ item.text }}
-        completed: 
-        {{ item.completed }}
-      </div>
+    <h1>To Do List</h1>
+    <div ng-controller="ToDoController as ctrl">
+      <p ng-repeat="item in ctrl.todos">
+        {{ item.text }}:
+        {{ item.completed ? "completed" : "to be done" }}
+      </p>
+
+      <input ng-model="newItem" type="text">
+      <button ng-click="ctrl.addToDo(newItem);" type="button" name="button">add</button>
+      <button ng-click="ctrl.removeToDo();" type="button" name="button">remove</button>
     </div>
   </body>
 </html>
