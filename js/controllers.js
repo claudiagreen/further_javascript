@@ -1,3 +1,8 @@
 toDoApp.controller("ToDoController", function() {
-  this.todo = "ToDo1";
+  var list = this;
+
+  list.todos = [
+    { text: "Todo1", completed: false },
+    { text: "Todo2", completed: true }
+  ];
 });
